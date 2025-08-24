@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DishFinder</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+  <div class="background-overlay"></div>
+  <div class="content">
+    <!-- App Header -->
+    <header class="app-header">
+      <h1>Welcome to <span class="brand-name">DishFinder</span></h1>
+      <p class="subheading">Discover delicious meals from around the world</p>
+    </header>
+
+    <!-- Random Recipe Button Section -->
+    <section class="random-recipe-section" aria-label="Get a random recipe">
+      <div class="random-button-container">
+        <form action="/random" method="GET">
+          <button type="submit" class="random-button" aria-label="Get a random recipe">
+            Random Recipe
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!--Message Display Area -->
+    <section class="message-section" aria-live="polite">
+      <div class="message">
+        <%= message || "Search for a random recipe" %>
+      </div>
+    </section>
+    <!-- Recipe Modal -->
+    <% if (recipe && ingredients) { %>
+      <div class="modal-container">
+        <div class="modal-content">
+          <!-- Close Button -->
+          <form action="/" method="get">
+            <button type="submit" class="modal-close-btn">&times;</button>
+          </form>
+
+          <!-- Recipe Details -->
+          <div id="recipe-details-content">
+            <h2>
+              <%= recipe.strMeal %>
+            </h2>
+            <img src="<%= recipe.strMealThumb %>" alt="<%= recipe.strMeal %>" class="recipe-image">
+
+            <h3>Category: <%= recipe.strCategory %>
+            </h3>
+
+            <!-- Ingredients List -->
+            <h3>Ingredients:</h3>
+            <ul>
+              <% ingredients.forEach(item=> { %>
+                <li>
+                  <%= item %>
+                </li>
+                <% }) %>
+            </ul>
+
+            <!-- Instructions -->
+            <h3>Instructions</h3>
+            <% recipe.strInstructions.split('\r\n').filter(instr=> instr.trim()).forEach(instruction => { %>
+              <p>
+                <%= instruction.trim() %>
+              </p>
+              <% }) %>
+
+                <!-- Video & Source Links -->
+                <h3>Video Recipe</h3>
+                <div class="video-wrapper">
+                  <a href="<%= recipe.strYoutube %>" target="_blank">Watch on YouTube</a>
+                </div>
+
+                <div class="source-wrapper">
+                  <a href="<%= recipe.strSource %>" target="_blank">View Original Source</a>
+                </div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+  </div>
+</body>
+
+</html>
