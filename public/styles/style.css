@@ -228,6 +228,27 @@ li {
   text-decoration: underline;
 }
 
+/* Loader */
+.loader {
+  border: 6px solid #ccc;
+  border-top: 6px solid #333;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
 /* Responsive adjustments for tablets and smaller devices */
 @media (max-width: 768px) {
   .app-header h1 {

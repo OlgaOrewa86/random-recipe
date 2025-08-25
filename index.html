@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DishFinder</title>
+  <link rel="stylesheet" href="./public/styles/style.css" />
+</head>
+
+<body>
+  <div class="background-overlay"></div>
+  <div class="content">
+    <!-- App Header -->
+    <header class="app-header">
+      <h1>Welcome to <span class="brand-name">DishFinder</span></h1>
+      <p class="subheading">Discover delicious meals from around the world</p>
+    </header>
+
+    <!-- Random Recipe Button Section -->
+    <section class="random-recipe-section" aria-label="Get a random recipe">
+      <div class="random-button-container">
+        <button onclick="getRandomRecipe()" class="random-button" aria-label="Get a random recipe">
+          Random Recipe
+        </button>
+      </div>
+    </section>
+
+    <!--Message Display Area -->
+    <section class="message-section" aria-live="polite">
+      <div class="message">
+        Search for a random recipe
+      </div>
+    </section>
+
+    <div id="loader" class="loader hidden"></div>
+
+    <script>
+      async function getRandomRecipe() {
+        const loader = document.getElementById("loader");
+        const messageEl = document.querySelector(".message");
+
+        // Show loader
+        loader.classList.remove("hidden");
+        messageEl.innerText = "Waking up the server... please wait";
+
+        // Wait before redirecting
+        setTimeout(() => {
+          window.location.href = "https://random-recipe.onrender.com/random?";
+        }, 3000);
+      }
+    </script>
+
+
+
+</body>
+
+</html>
