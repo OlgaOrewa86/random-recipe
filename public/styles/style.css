@@ -146,6 +146,8 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+  overflow-y: auto; /* allows scrolling */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
 
 .modal-content {
@@ -197,8 +199,11 @@ body {
 
 .recipe-image {
   width: 100%;
+  max-width: 400px;
+  height: auto;
   border-radius: var(--border-radius);
-  margin: 1rem 0;
+  margin: 1rem auto;
+  display: block;
 }
 
 h3 {
