@@ -1,7 +1,6 @@
 import express from "express";
 import axios from "axios";
 import dotenv from "dotenv";
-import helmet from "helmet";
 
 // Load environment variables from .env file
 dotenv.config();
@@ -11,9 +10,6 @@ const port = process.env.PORT || 3000;
 
 // Serve static assets from the 'public' folder
 app.use(express.static("public"));
-
-// Adds security-related HTTP headers to help protect the app from common vulnerabilities
-app.use(helmet());
 
 app.get("/", (req, res) => {
   // Render the homepage with a default message and no recipe
