@@ -142,9 +142,11 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--color-modal-bg);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   z-index: 1000;
 }
 
@@ -284,12 +286,8 @@ li {
   ul {
     padding-left: 1rem;
   }
+
   .modal-content {
     padding: 4rem 1rem;
-  }
-
-  .modal-close-btn {
-    right: 0.5rem;
-    top: 3rem;
   }
 }
