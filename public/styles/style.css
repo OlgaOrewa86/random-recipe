@@ -48,7 +48,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.5; /* Adjust this value */
+  opacity: 0.5;
   z-index: -1;
 }
 
@@ -146,8 +146,6 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  overflow-y: auto; /* allows scrolling */
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
 
 .modal-content {
@@ -192,6 +190,7 @@ body {
 
 /* Recipe Details */
 #recipe-details-content h2 {
+  text-align: center;
   margin-top: 0;
   font-size: var(--font-size-xl);
   color: var(--color-accent);
@@ -284,5 +283,13 @@ li {
 
   ul {
     padding-left: 1rem;
+  }
+  .modal-content {
+    padding: 4rem 1rem;
+  }
+
+  .modal-close-btn {
+    right: 0.5rem;
+    top: 3rem;
   }
 }
