@@ -86,7 +86,7 @@ body {
 .random-recipe-section {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 4rem;
 }
 
 .random-button-container {
@@ -260,16 +260,16 @@ li {
 /* Responsive adjustments for tablets and smaller devices */
 @media (max-width: 768px) {
   .app-header h1 {
-    font-size: 1.6rem;
+    font-size: var(--font-size-xl);
   }
 
   .subheading {
-    font-size: 1rem;
+    font-size: var(--font-size-lg);
   }
 
   .random-button {
-    padding: 0.6rem 1.2rem;
-    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: var(--font-size-lg);
   }
 
   .modal-content {
@@ -282,7 +282,7 @@ li {
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: var(--font-size-base);
   }
 
   ul {
