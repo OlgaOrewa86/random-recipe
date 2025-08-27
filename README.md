@@ -8,7 +8,7 @@ A fun web app that serves up random recipes to inspire your next meal. Built wit
 - Hosted on GitHub Pages and Render
 
 ## How to Run
-1.  Clone the repo:  
+1. Clone the repo:  
    ```sh
    git clone https://github.com/OlgaOrewa86/random-recipe.git)
    ```
