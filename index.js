@@ -14,7 +14,7 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   // Render the homepage with a default message and no recipe
   res.render("index.ejs", {
-    message: "Search for a random recipe",
+    message: "Feeling hungry? Hit the button!",
     recipe: null,
     ingredients: [],
   });
