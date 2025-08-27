@@ -16,15 +16,15 @@ A fun web app that serves up random recipes to inspire your next meal. Built wit
    ```sh
    cd random-recipe-generator
    ```
-4. Install dependencies:
+3. Install dependencies:
    ```sh
    npm install
    ```
-5. Create a `.env` file with necessary environment variables:  
+4. Create a `.env` file with necessary environment variables:  
    ```env
    PORT=3000
    ```
-6. Start server:
+5. Start server:
    ```sh
    npm start
    ```
