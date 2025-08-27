@@ -11,12 +11,18 @@ A fun web app that serves up random recipes to inspire your next meal. Built wit
 1.  Clone the repo:  
    ```sh
    git clone <repo-url>
+   ```
 2. Navigate into the folder: `cd random-recipe-generator`
 3. Install dependencies: `npm install`
+
 4. Create a `.env` file with necessary environment variables:  
    ```env
-   PORT=3000 
-5. Start server: `npm start`
+   PORT=3000
+   ```
+5. Start server:
+   ```sh
+   npm start
+   ```
 
 ## Live Demo
 Check out the live version here: [Random Recipe Generator](https://olgaorewa86.github.io/random-recipe/)
