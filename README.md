@@ -14,7 +14,7 @@ A fun web app that serves up random recipes to inspire your next meal. Built wit
    ```
 2. Navigate into the folder:
    ```sh
-   cd random-recipe-generator
+   cd random-recipe
    ```
 3. Install dependencies:
    ```sh
